@@ -180,12 +180,11 @@ p {
   color: white;
 }
   
-/*
 .toggle-button {
   position: absolute;
-  top: 0.75em;
+  top: 1em;
   right: 1em;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 3em;
