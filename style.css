@@ -235,6 +235,38 @@ p {
     background-color: transparent;
     
   }
+
+  .hamburger-menu {
+    display: none;
+
+  }
+
+  .navigation-list {
+    position: relative;
+    height: 100px;
+    top: 0;
+    background: none;
+    float: right;
+    text-align: right;
+    margin-right: 1em;
+    transition: none;
+  }
+
+  .navigation-list li {
+    display: inline-block;
+    opacity: 1;
+    line-height: 100px;
+    margin: 0 1.3em;
+    transition: none;
+  }
+
+  .navigation-list li a.active,
+  .navigation-list li a:hover,
+  .navigation-list li a,
+  .logo-text {
+    color: #333333;
+
+  }
     
     
   }
