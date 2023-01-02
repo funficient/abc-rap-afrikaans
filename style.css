@@ -44,7 +44,8 @@
   
   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
   ul[role='list'],
-  ol[role='list'] {
+  ol[role='list'],
+  ul {
     list-style: none;
   }
   
@@ -114,11 +115,9 @@ p {
     padding-bottom: 1rem;
   }
 
-  ul {
-    list-style: none;
-  }
 
-  
+
+
 
   /*----- Buttons -----*/
 
@@ -146,18 +145,25 @@ p {
 
   /*----- Specific component styling -----*/
 
-  .navigation {
-    max-width: 100%;
-    display: flex;
-    }
 
-  .navigation-links {
-    display: flex;
-    justify-content: space-between;
+  .menu {
+    max-width: 30px;
   }
 
+@media (min-width: 1440px) {
+    
+    .navigation-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
+    .navigation-container ul {
+      display: flex;
+      justify-content: space-between;
+    }
 
-  .menu
+  }
+
 
   
