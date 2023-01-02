@@ -95,10 +95,12 @@
   /*----- Utility components re-used throughout -----*/
 
 h1 {
+  font-family: 'Bitter', serif;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 3em;
   line-height: 1.7rem;
-  color: #0f0f0f;
+  color:var(--color-turquise);
+  padding: 1em;
   }
   
 p {
@@ -215,7 +217,6 @@ p {
   left: 50%;
   transform: translate(-50%, -50%) ;
   background-color: rgba(70, 70, 70, 0.7);
-  padding: 2em;
   
 }
 
@@ -226,6 +227,16 @@ p {
   line-height: 1.2em;
 }
 
+.container {
+  padding: 3em;
+}
+
+.container p {
+  font-weight: 400;
+  padding: 2em 3em;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
 
 /*-- Responsive for desktop --*/
 
