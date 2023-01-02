@@ -8,15 +8,16 @@
     --color-lime: #c5ca30;
     --color-green: #8ac926;
     --color-avo: #52a675;
+    --color-turquise: #429cac;
     --color-blue: #1982c4;
     --color-indigo: #4267ac;
     --color-purple: #6a4c93;
     --color-light-purple: #b5a6c9;
 
     --color-neutral-white: hsl(0, 0%, 100%);
-    --color-neutral-light-grey: hsl(217, 12%, 63%);
-    --color-neutral-gray:hsl(216, 12%, 54%);
-    --color-neutral-dark-blue:hsl(216, 12%, 8%);
+    --color-neutral-light-grey: hsl(0, 0%, 66%);
+    --color-neutral-gray:hsl(0, 0%, 27%);
+    --color-neutral-dark-gray:hsl(0, 0%, 9%);
     
   
     font-family: 'Poppins', sans-serif;
@@ -67,10 +68,6 @@
     width: 100vw;
   }
   
-  /* A elements that don't have a class get default styles */
-  a:not([class]) {
-    text-decoration-skip-ink: auto;
-  }
   
   /* Make images easier to work with */
   img,
@@ -143,131 +140,56 @@ p {
   } 
 
 
-  /*----- Specific component styling -----*/
+  /*----- Navigation bar  -----*/
 
-
-  nav {
-    height: 75px;
-    width: 100%;
-    background-color: #333333;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo-container {
-    padding: 1rem;
-    display: flex;
-  }
-
-  .logo-text span {
-    font-weight: 300;
-    letter-spacing: -1px;
-  }
-
-  .logo-text {
-    font-weight: 700;
-    font-size: 1.7em;
-    color: white;
-  }
-
-.navigation-list {
-  position: fixed;
-  width: 100%;
-  height: 0vh;
-  top: 75px;
-  background-color: #333333;
-  opacity: 1;
-  float: right;
-  text-align: center;
-  transition: all 0.5s;
-  
-}
-
-.navigation-list li {
-  opacity: 0;
-  line-height: 3em;
-  margin: 1em 0;
-  transition: all 0.5s;
-}
-
-.navigation-list li a {
-  color: white;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.navigation-list li a.active,
-.navigation-list li a:hover {
-  color: var(--color-orange);
-}
-
-.hamburger-menu {
-  display: block;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 1em;
-  float: right;
-  cursor: pointer;
-  color: white;
 }
 
-#check {
-  display: none;
+.brand-title {
+  font-size: 1.5em;
+  font-weight: 800
 }
 
-#check:checked ~ .navigation-list {
-  height: 100vh;
-}
-
-#check:checked ~ .navigation-list li {
-  height: 100vh;
-  opacity: 1;
-  padding-top: 3em;
+.brand-title span {
+  font-weight: 300;
 }
 
 
+
+/*-- Hero section with video --*/
+
+
+
+
+/*-- Responsive for desktop --*/
 
 @media (min-width: 1440px) {
 
-  nav {
-    height: 100px;
-    background-color: transparent;
-    
-  }
-
-  .hamburger-menu {
-    display: none;
-
-  }
-
   .navigation-list {
-    position: relative;
-    height: 100px;
-    top: 0;
-    background: none;
-    float: right;
-    text-align: right;
-    margin-right: 1em;
-    transition: none;
+    display: flex;
   }
 
-  .navigation-list li {
-    display: inline-block;
-    opacity: 1;
-    line-height: 100px;
-    margin: 0 1.3em;
-    transition: none;
+  .navigation-list li a {
+    text-decoration: none;
+    color: var(--color-neutral-dark-gray);
+    padding: 1em;
+    display: block;
   }
 
-  .navigation-list li a.active,
-  .navigation-list li a:hover,
-  .navigation-list li a,
-  .logo-text {
-    color: #333333;
-
+  .navigation-list li:hover {
+    background-color: var(--color-turquise);
+    opacity: 0.8;
+    color: white;
   }
+   
+  .navigation-list li a:hover {
     
+    color: white;
+  }
     
   }
 
