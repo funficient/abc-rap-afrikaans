@@ -47,8 +47,7 @@
   
   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
   ul[role='list'],
-  ol[role='list'],
-  ul {
+  ol[role='list'] {
     list-style: none;
   }
   
@@ -100,7 +99,6 @@ h1 {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.7rem;
-  padding: 1rem 0 1rem 0;
   color: #0f0f0f;
   }
   
@@ -111,9 +109,6 @@ p {
     color: #0f0f0f;
     padding-bottom: 1rem;
   }
-
-
-
 
 
   /*----- Buttons -----*/
@@ -144,19 +139,68 @@ p {
 
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin: 1em;
+  align-items: center;
+  color: var(--color-neutral-dark-gray);
+  padding: 1em 5em;
 }
 
 .brand-title {
-  font-size: 1.5em;
-  font-weight: 800
+  font-size: 1.7em;
+  font-weight: 800;
 }
 
 .brand-title span {
   font-weight: 300;
+  color: var(--color-turquise);
 }
+
+.navigation-list {
+  display: flex;
+}
+
+.navigation-list li {
+  list-style: none;
+}
+
+.navigation-list li a {
+  text-decoration: none;
+  color: var(--color-neutral-dark-gray);
+  padding: 1em 2em;
+  display: block;
+}
+  
+.navigation-list li:hover {
+  background-color: var(--color-turquise);
+  opacity: 0.8;
+}
+   
+.navigation-list li a:hover {
+  font-weight: 700;
+  color: white;
+}
+  
+/*
+.toggle-button {
+  position: absolute;
+  top: 0.75em;
+  right: 1em;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 3em;
+  height: 2em;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-neutral-dark-gray);  
+  border-radius: 10px;
+}
+
+
+
 
 
 
@@ -167,28 +211,15 @@ p {
 
 /*-- Responsive for desktop --*/
 
-@media (min-width: 1440px) {
+@media (max-width: 1440px) {
+
+  .toggle-button {
+    display: flex; 
+  }
 
   .navigation-list {
-    display: flex;
-  }
-
-  .navigation-list li a {
-    text-decoration: none;
-    color: var(--color-neutral-dark-gray);
-    padding: 1em;
-    display: block;
-  }
-
-  .navigation-list li:hover {
-    background-color: var(--color-turquise);
-    opacity: 0.8;
-    color: white;
-  }
-   
-  .navigation-list li a:hover {
-    
-    color: white;
+    /*display: none;
+    flex-direction: row;*/ 
   }
     
   }
